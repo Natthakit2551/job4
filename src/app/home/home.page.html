@@ -1,20 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="success" >
+
+    <ion-title >
+      App BMI
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding" [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="ion-text-center">
+  <img src="../../assets/img/1640197261_32487.jpg" width="200px" height="200px"></div>
+  <ion-card color="primary" class="ion-padding">
+
+      <ion-item>
+  <ion-input label="กรอกนํ้าหนัก" color="light" placeholder="kg" ></ion-input>
+      </ion-item>
+      <ion-item>
+  <ion-input label="กรอกส่่วนสูง" color="light"placeholder="cm" ></ion-input>
+    </ion-item><br>
+  <ion-button color="warning" size="large" expand="block" shape="round">คํานวณ</ion-button>
+  </ion-card>
+  <br>
+  <div class="ion-text-center">
+  <ion-button color="success" size="large" expand="block" >ผลลัพธ์</ion-button>
+  <ion-button color="danger" size="large" expand="block" > แปรผล</ion-button>
+</div>
+
+
 </ion-content>
