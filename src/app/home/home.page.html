@@ -19,12 +19,12 @@
   <ion-card color="primary" class="ion-padding">
 
       <ion-item>
-  <ion-input label="กรอกนํ้าหนัก" color="light" placeholder="kg" ></ion-input>
+  <ion-input label="กรอกนํ้าหนัก" color="light" placeholder="kg" [(ngModel)]="weight"></ion-input>
       </ion-item>
       <ion-item>
-  <ion-input label="กรอกส่่วนสูง" color="light"placeholder="cm" ></ion-input>
+  <ion-input label="กรอกส่่วนสูง" color="light"placeholder="cm" [(ngModel)]="hight" ></ion-input>
     </ion-item><br>
-  <ion-button color="warning" size="large" expand="block" shape="round">คํานวณ</ion-button>
+  <ion-button color="warning" size="large" expand="block" shape="round" (click)="oncal()">คํานวณ</ion-button>
   </ion-card >
   <br>
   <ion-card color="danger" class="ion-text-center">
@@ -33,8 +33,8 @@
       ผลลัพธ์
     </ion-card-subtitle>
     <ion-card-title>
-      18.5
-    </ion-card-title>
+  {{result | number : '1.0-2'}}
+  </ion-card-title>
   </ion-card-header>
 </ion-card>
 <ion-card color="success" class="ion-text-center">
@@ -43,7 +43,7 @@
   แปรผล
 </ion-card-subtitle>
 <ion-card-title>
-  อยู่ในเกณฑ์ปกติ
+  {{result_text}}
 </ion-card-title>
 </ion-card-header>
 </ion-card>
